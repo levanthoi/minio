@@ -12,4 +12,4 @@ VOLUME ["/data"]
 EXPOSE 9000 9001
 
 # Start MinIO server with explicit bind addresses
-CMD ["server", "/data", "--address", ":9000", "--console-address", ":9001"]
+CMD ["server", "/data", "--address", "0.0.0.0:9000"]
