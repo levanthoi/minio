@@ -11,4 +11,5 @@ VOLUME ["/data"]
 # Expose MinIO API port and Console port
 EXPOSE 9000 9001
 
-CMD ["server", "/data", "--console-address", ":9001"]
+# Start MinIO server with explicit bind addresses
+CMD ["server", "/data", "--address", ":9000", "--console-address", ":9001"]
