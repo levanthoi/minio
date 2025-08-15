@@ -8,4 +8,7 @@ ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
 
 VOLUME ["/data"]
 
-CMD ["minio"]
+# Expose MinIO API port and Console port
+EXPOSE 9000 9001
+
+CMD ["server", "/data", "--console-address", ":9001"]
